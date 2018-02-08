@@ -1,0 +1,6 @@
+[[ ! -d src/test/googletest ]] && ( cd src/test;git clone https://github.com/google/googletest.git )
+
+mkdir -p build
+cd build
+cmake ../src -DENABLE_TESTS=on -DENABLE_FFTW=on -DCMAKE_BUILD_TYPE=debug -fPIC
+make
